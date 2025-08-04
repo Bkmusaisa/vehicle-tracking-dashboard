@@ -1,4 +1,4 @@
-const sheetURL = "https://script.google.com/macros/s/AKfycbxzbcO9Lq-2Mn-HK-5-cCETF29bAQStNaofAb-xCZu9wMAqx3s0cfkvl8zEdqd6J2n8/exec";
+const sheetURL = "https://script.google.com/macros/s/AKfycbwoQx-qbNPQS9h4sibvu_8MZDUbIVpW7qI_gcb_eIc/dev";
 
 const map = L.map("map").setView([11.0667, 7.7167], 14); // ABU Zaria
 
