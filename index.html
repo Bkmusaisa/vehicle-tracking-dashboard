@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ABU Vehicle Tracker</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" type="image/png" href="abu-logo.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"/>
+</head>
+<body>
+  <header>
+    <img src="abu-logo.png" alt="ABU Logo" class="logo"/>
+    <h1>ABU Zaria Vehicle Tracker</h1>
+  </header>
+
+  <main>
+    <div id="map"></div>
+    <div class="panel">
+      <h2>Admin Controls</h2>
+      <button onclick="sendOverride('ON')">Activate Override</button>
+      <button onclick="sendOverride('OFF')">Deactivate Override</button>
+      <p id="status">Status: <span>Connected</span></p>
+    </div>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
