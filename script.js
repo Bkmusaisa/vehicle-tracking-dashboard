@@ -12,10 +12,18 @@ function fetchData() {
   fetch(sheetURL)
     .then((res) => res.json())
     .then((data) => {
-      data.forEach((vehicle) => {
-        const { id, lat, lng, speed, time, color } = vehicle;
+     data.forEach((vehicle) => {
+  const { id, lat, lng, speed, time, color } = vehicle;
 
-        const position = [parseFloat(lat), parseFloat(lng)];
+  const latNum = parseFloat(lat);
+  const lngNum = parseFloat(lng);
+
+  if (isNaN(latNum) || isNaN(lngNum)) {
+    console.warn("Skipping invalid coordinates for vehicle:", vehicle);
+    return; // skip this iteration
+  }
+
+  const position = [latNum, lngNum];
 
         if (!vehicleMarkers[id]) {
           const marker = L.circleMarker(position, {
