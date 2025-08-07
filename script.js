@@ -18,7 +18,7 @@ const latNum = parseFloat(vehicle["Latitude"]);
 const lngNum = parseFloat(vehicle["Longitude"]);
 const speed = vehicle["Speed"];
 const time = vehicle["Timestamp"];
-const color = vehicle["Color"] || "blue";
+const color = vehicle["Color"];
 
   if (isNaN(latNum) || isNaN(lngNum)) {
     console.warn("Skipping invalid coordinates for vehicle:", vehicle);
