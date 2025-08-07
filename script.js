@@ -13,10 +13,12 @@ function fetchData() {
     .then((res) => res.json())
     .then((data) => {
      data.forEach((vehicle) => {
-  const { id, lat, lng, speed, time, color } = vehicle;
-
-  const latNum = parseFloat(lat);
-  const lngNum = parseFloat(lng);
+ const id = vehicle["Vehicle ID"];
+const latNum = parseFloat(vehicle["Latitude"]);
+const lngNum = parseFloat(vehicle["Longitude"]);
+const speed = vehicle["Speed"];
+const time = vehicle["Timestamp"];
+const color = vehicle["Color"] || "blue";
 
   if (isNaN(latNum) || isNaN(lngNum)) {
     console.warn("Skipping invalid coordinates for vehicle:", vehicle);
